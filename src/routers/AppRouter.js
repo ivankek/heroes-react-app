@@ -1,12 +1,12 @@
 import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import { LoginScreen } from "../components/login/LoginScreen";
 import { DashboardRoutes } from "./DashboardRoutes";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 export const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route
           path="/login"
@@ -28,6 +28,6 @@ export const AppRouter = () => {
 
         {/* <Route path="/*" element={<DashboardRoutes />} /> */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
